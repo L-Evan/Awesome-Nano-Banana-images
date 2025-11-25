@@ -1,0 +1,146 @@
+name: "人像高清修复模板"
+category: "照片编辑"
+subcategory: "人像修复"
+difficulty: "初级"
+language: "英文"
+version: "1.0"
+
+description: |
+  适用于修复模糊、低分辨率或老旧的人像照片。
+  可以恢复细节、提升清晰度、修复噪点和损坏。
+
+template: |
+  Restore and enhance this portrait photo,
+  fix [问题类型],
+  increase resolution to [目标分辨率],
+  [风格要求] style,
+  [特殊要求]
+
+variables:
+  - name: "问题类型"
+    description: "照片存在的主要问题"
+    type: "select"
+    options:
+      - value: "blur and noise"
+        label: "模糊和噪点"
+      - value: "low resolution"
+        label: "低分辨率"
+      - value: "damage and scratches"
+        label: "损坏和划痕"
+      - value: "fading and discoloration"
+        label: "褪色和变色"
+    default: "blur and noise"
+
+  - name: "目标分辨率"
+    description: "期望的输出分辨率"
+    type: "select"
+    options:
+      - value: "2K"
+        label: "2K (2048x1536)"
+      - value: "4K"
+        label: "4K (3840x2160)"
+      - value: "8K"
+        label: "8K (7680x4320)"
+    default: "4K"
+
+  - name: "风格要求"
+    description: "修复后的照片风格"
+    type: "select"
+    options:
+      - value: "natural"
+        label: "自然风格"
+      - value: "artistic"
+        label: "艺术风格"
+      - value: "professional"
+        label: "专业风格"
+      - value: "vintage"
+        label: "复古风格"
+    default: "natural"
+
+  - name: "特殊要求"
+    description: "额外的特殊要求（可选）"
+    type: "text"
+    placeholder: "preserve vintage feel, modernize, etc."
+    optional: true
+
+examples:
+  - name: "修复模糊老照片"
+    variables:
+      问题类型: "blur and noise"
+      目标分辨率: "4K"
+      风格要求: "natural"
+      特殊要求: "preserve vintage atmosphere"
+    filled_prompt: |
+      Restore and enhance this portrait photo,
+      fix blur and noise,
+      increase resolution to 4K,
+      natural style,
+      preserve vintage atmosphere
+
+  - name: "提升低分辨率数码照片"
+    variables:
+      问题类型: "low resolution"
+      目标分辨率: "4K"
+      风格要求: "professional"
+      特殊要求: ""
+    filled_prompt: |
+      Restore and enhance this portrait photo,
+      fix low resolution,
+      increase resolution to 4K,
+      professional style
+
+  - name: "修复损坏的历史照片"
+    variables:
+      问题类型: "damage and scratches"
+      目标分辨率: "2K"
+      风格要求: "vintage"
+      特殊要求: "preserve historical authenticity"
+    filled_prompt: |
+      Restore and enhance this portrait photo,
+      fix damage and scratches,
+      increase resolution to 2K,
+      vintage style,
+      preserve historical authenticity
+
+parameters:
+  temperature: 0.7
+  aspect_ratio: "auto"
+  quality: "high"
+
+usage_tips:
+  - "输入图像分辨率建议不低于 512x512"
+  - "人像占比建议在画面的 30-70%"
+  - "光线过暗的照片可能需要额外的 'enhance lighting' 提示"
+  - "严重损坏（>50%）的照片建议先手动预处理"
+
+recommended_platform:
+  name: "nanobanana2ai.art"
+  url: "https://nanobanana2ai.art"
+  promo_code: "BANANA25"
+  note: "社区成员使用优惠码可享受特别折扣"
+
+success_rate:
+  overall: "90%"
+  scenarios:
+    - type: "家庭老照片"
+      rate: "90%"
+    - type: "历史档案"
+      rate: "85%"
+    - type: "低分辨率数码照片"
+      rate: "95%"
+
+limitations:
+  - "输入分辨率过低（<256x256）可能效果不佳"
+  - "人像占比过小（<20%）可能识别困难"
+  - "过度曝光或欠曝的照片需要特殊处理"
+
+tags:
+  - 人像
+  - 修复
+  - 高清化
+  - 老照片
+  - 初级
+
+author: "@awesome-nanobanana"
+created_at: "2025-01-26"
+updated_at: "2025-01-26"

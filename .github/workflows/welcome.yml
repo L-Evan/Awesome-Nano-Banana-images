@@ -1,0 +1,65 @@
+name: Welcome New Contributors
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome New Issue Creator
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const creator = issue.user.login;
+
+            // 检查是否是第一次创建 Issue
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              creator: creator,
+              state: 'all'
+            });
+
+            if (issues.data.length === 1) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number,
+                body: `🎉 **欢迎 @${creator}！**\n\n感谢你提交的第一个 Issue！\n\n我们会尽快处理。在等待期间，你可以：\n- 📖 浏览 [案例库](https://github.com/${context.repo.owner}/${context.repo.repo}/tree/main/showcases)\n- 🎨 尝试在 [nanobanana2ai.art](https://nanobanana2ai.art) 实践（优惠码: **BANANA25**）\n- 💬 参与 [Discussions](https://github.com/${context.repo.owner}/${context.repo.repo}/discussions)\n\n期待你的更多贡献！ 🚀`
+              });
+            }
+
+      - name: Welcome New PR Contributor
+        if: github.event_name == 'pull_request_target'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const creator = pr.user.login;
+
+            // 检查是否是第一次提交 PR
+            const prs = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'all',
+              creator: creator
+            });
+
+            if (prs.data.length === 1) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.number,
+                body: `🎉 **欢迎 @${creator} 的第一个 PR！**\n\n感谢你的贡献！你的 PR 已经提交成功。\n\n## 📋 接下来会发生什么？\n\n1. ✅ **自动检查**: CI 会自动验证你的提交\n2. 👀 **人工审核**: 维护者会在 3-7 天内审核\n3. 💬 **反馈修改**: 如需修改，我们会及时反馈\n4. 🎊 **合并发布**: 通过后会合并到主分支\n\n## 🎁 贡献者福利\n\n- 🏆 你的名字将出现在 [CONTRIBUTORS.md](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/CONTRIBUTORS.md)\n- 📢 优秀作品可能获得官方推广\n- 🎁 活跃贡献者有机会获得额外优惠码\n\n## 💡 提示\n\n推荐使用 [nanobanana2ai.art](https://nanobanana2ai.art) 验证你的提示词效果（优惠码: **BANANA25**）\n\n再次感谢你的贡献！ 🙌`
+              });
+            }

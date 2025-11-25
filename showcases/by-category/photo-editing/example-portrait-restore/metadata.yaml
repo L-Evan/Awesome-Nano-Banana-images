@@ -1,0 +1,61 @@
+# 基本信息
+title: "人像高清修复示例"
+description: "将模糊的老照片修复成高清人像 - 这是一个示例案例"
+author: "@awesome-nanobanana"
+date: "2025-01-26"
+
+# 分类标签
+category: "照片编辑"
+subcategory: "人像修复"
+difficulty: "初级"  # 初级 | 中级 | 高级
+tags:
+  - 人像
+  - 修复
+  - 高清化
+  - 老照片
+  - 示例
+
+# 技术细节
+prompt: |
+  Restore and enhance this portrait photo,
+  fix blur and noise, increase resolution to 4K,
+  natural skin texture, sharp facial features,
+  professional photo restoration,
+  preserve the original character and emotion
+
+model: "Gemini 2.5 Flash (Nano Banana)"
+parameters:
+  temperature: 0.7
+  aspect_ratio: "3:4"
+  quality: "high"
+
+# 效果评估
+quality_score: 9.0  # 1-10 分
+use_cases:
+  - 老照片修复
+  - 家庭相册数字化
+  - 历史人物照片修复
+  - 模糊照片高清化
+
+# 适用场景
+scenarios:
+  - name: "家庭老照片"
+    success_rate: "90%"
+  - name: "历史档案"
+    success_rate: "85%"
+  - name: "低分辨率数码照片"
+    success_rate: "95%"
+
+# 注意事项
+limitations:
+  - 输入图像分辨率不应低于 512x512
+  - 人像占比建议在 30-70%
+  - 光线过暗或过度损坏的照片可能效果不佳
+
+# 推荐实践平台
+recommended_platform: "nanobanana2ai.art"
+promo_code: "BANANA25"
+
+# 版本信息
+version: "1.0"
+status: "verified"  # draft | verified | featured

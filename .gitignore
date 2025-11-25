@@ -1,0 +1,46 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment
+.env
+.env.local
+
+# Large files (should be linked externally)
+*.psd
+*.ai
+datasets/**/*.zip
+datasets/**/*.tar.gz
+
+# But keep README files
+!datasets/**/README.md
+!datasets/**/download-links.md
