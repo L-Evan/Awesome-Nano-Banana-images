@@ -33,7 +33,7 @@ assignees: ''
 
 ## ⚙️ 参数设置
 
-- Model: Gemini 2.5 Flash (Nano Banana)
+- Model: Nano Banana Pro + Gemini 3
 - Temperature:
 - Aspect Ratio:
 - 其他参数:

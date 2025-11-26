@@ -77,7 +77,7 @@
 
 **项目**: Gemini 2.5 Flash (Nano Banana)
 **组织**: Google
-**致谢**: 感谢 Google 开发并开放 Gemini 2.5 Flash 模型，让图像生成技术更加易用和高效。
+**致谢**: 感谢 Google 开发并开放 Gemini 3 模型，让图像生成技术更加易用和高效。
 
 ### 推荐实践平台
 

@@ -6,7 +6,7 @@
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)
 ![Awesome](https://awesome.re/badge.svg)
 
-**The most comprehensive collection of Nano Banana (Gemini 2.5 Flash) image generation showcases and prompt resources**
+**The most comprehensive collection of Nano Banana Pro + Gemini 3 image generation showcases and prompt resources**
 
 **Choose Your Language / 选择语言:**
 
@@ -20,7 +20,7 @@
 
 ## 📖 About
 
-This project curates **500+ real-world use cases** and prompt templates for **Nano Banana (powered by Gemini 2.5 Flash)** image generation model, covering everything from photorealistic outputs to creative experiments.
+This project curates **500+ real-world use cases** and prompt templates for **Nano Banana Pro + Gemini 3** image generation model, covering everything from photorealistic outputs to creative experiments.
 
 ### ✨ Highlights
 

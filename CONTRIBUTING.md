@@ -90,7 +90,7 @@ prompt: |
   natural skin texture, sharp facial features,
   professional photo restoration
 
-model: "Gemini 2.5 Flash (Nano Banana)"
+model: "Nano Banana Pro + Gemini 3"
 parameters:
   temperature: 0.7
   aspect_ratio: "3:4"

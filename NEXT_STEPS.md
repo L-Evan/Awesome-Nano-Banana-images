@@ -235,7 +235,7 @@ git checkout -b gh-pages
 
 **标题**:
 ```
-🎨 Awesome Nano Banana - 最全面的 Gemini 2.5 Flash 图像生成资源库（500+ 案例 + 优惠码）
+🎨 Awesome Nano Banana Pro + Gemini 3 - 最全面的图像生成资源库（500+ 案例 + 优惠码）
 ```
 
 **正文**:

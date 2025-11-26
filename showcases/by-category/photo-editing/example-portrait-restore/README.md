@@ -36,7 +36,7 @@ preserve the original character and emotion
 
 ### ⚙️ 参数设置
 
-- **Model**: Gemini 2.5 Flash (Nano Banana)
+- **Model**: Nano Banana Pro + Gemini 3
 - **Temperature**: 0.7
 - **Aspect Ratio**: 3:4
 - **Quality**: High
